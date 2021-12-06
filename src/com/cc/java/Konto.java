@@ -2,15 +2,20 @@ package com.cc.java;
 
 public class Konto {
     
-    public String name;
-    public int kontostand = 10000;
+    private int kontostand;
 
-    public void tellYourAddress(){
-        System.out.println("Blick von innen: " + this);
-     }
-
-    public String tellYourName(){
-       return this.name;
+    public Konto(int kontostand) {
+       this.kontostand = kontostand;
+    }
+ 
+    // Getter
+    public int getKontostand() {
+       return kontostand;
+    }
+ 
+    // eine Art Setter ...
+    public void updateKontostand(int factor) {
+       this.kontostand *= factor;
     }
 
 }
